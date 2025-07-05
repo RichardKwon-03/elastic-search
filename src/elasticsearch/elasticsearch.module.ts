@@ -13,5 +13,6 @@ import { getElasticsearchConfig } from './elasticsearch.config';
     }),
   ],
   providers: [ElasticsearchService],
+  exports: [ElasticsearchService],
 })
 export class ElasticsearchModule {}

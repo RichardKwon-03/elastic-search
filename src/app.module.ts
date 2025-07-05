@@ -3,6 +3,7 @@ import { ElasticsearchModule } from './elasticsearch/elasticsearch.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { getTypeormConfig } from './database/typeorm';
+import { PostModule } from './post/post.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { getTypeormConfig } from './database/typeorm';
       useFactory: getTypeormConfig,
     }),
     ElasticsearchModule,
+    PostModule,
   ],
   controllers: [],
   providers: [],
